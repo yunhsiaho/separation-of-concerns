@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { link } from './link.js';
 
 describe('link: renders a DOM anchor element', () => {

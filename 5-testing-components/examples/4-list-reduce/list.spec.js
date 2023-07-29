@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { list } from './4-b-list-reduce.js';
 
 describe('list: renders a list from an array of strings', () => {

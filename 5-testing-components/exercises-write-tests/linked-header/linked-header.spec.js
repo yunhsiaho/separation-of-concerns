@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { linkedHeader } from './linked-header.js';
 
 describe('linkedHeader: renders an anchor inside a heading', () => {

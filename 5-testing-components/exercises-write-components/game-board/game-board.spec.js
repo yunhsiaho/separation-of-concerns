@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { gameBaord } from './game-board.js';
 
 describe('gameBaord: renders a list of user screen names and real names', () => {

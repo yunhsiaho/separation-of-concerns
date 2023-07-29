@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { list } from './4-a-list-loop.js';
 
 describe('list: renders a list from an array of strings', () => {

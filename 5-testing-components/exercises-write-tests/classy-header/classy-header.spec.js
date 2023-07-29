@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { classyHeader } from './classy-header.js';
 
 describe('classyHeader: renders DOM headers of different levels and classes', () => {

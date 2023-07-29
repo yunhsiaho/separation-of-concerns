@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { paragraph } from './1-paragraph.js';
 
 describe('paragraph: renders a paragraph with optional styling', () => {
