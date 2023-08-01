@@ -42,9 +42,14 @@
 
         <script id="dom-manipulation-script">
           'use strict';
-          debugger;
+          //debugger;
 
           // write me! (... without using cloneNode, that's kind of cheating)
+          //let h1 = document.createElement('h1');
+          let h1 = document.createElement('h1') ;
+          document.querySelector('#actual').prepend(h1);
+          document.querySelector('#actual h1').innerHTML= "a list of things";
+          document.querySelectorAll('#actual li')[1].innerHTML= "solar systems";
         </script>
       </div>
 

@@ -44,8 +44,13 @@
         <script id="dom-manipulation-script">
           'use strict';
           debugger;
+          document.querySelector('#actual ol').outerHTML = document.querySelector('#actual ol').outerHTML.replace(/ol/g, "ul");//replace <ol> by <ul>
+            document.querySelector('#actual').prepend(document.createElement("h1"));//add the h1 title as the first child
+            document.querySelector('#actual h1').innerHTML = "a list of things";
+            document.querySelectorAll('#actual li')[1].innerHTML = "solar systems"; //change the innerHTML of seconde <li>
+            document.querySelectorAll('#actual li')[3].remove();//remove the last <li> element
 
-          // write me! (... without using cloneNode, that's kind of cheating)
+          // write me! (... without using cloneNode, that's kind of cheating
         </script>
       </div>
 

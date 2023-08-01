@@ -44,6 +44,28 @@
           debugger;
 
           // write me! (... without using cloneNode, that's kind of cheating)
+          document.querySelector('#actual').append(document.createElement("h2"));//create a h2 tag and append to #actual
+          document.querySelector('#actual h2').innerHTML= "a list of things" //add text into h2 tag
+          document.querySelector('#actual').append(document.createElement("ul"));//create a ul tag and append to #actual
+          document.querySelector('#actual ul').attributes;
+
+          document.querySelector('#actual ul').append(document.createElement("li"));
+          document.querySelectorAll("#actual li")[0].innerHTML = "robots";
+
+          document.querySelector('#actual ul').append(document.createElement("li"));
+          document.querySelectorAll("#actual li")[1].innerHTML = "solar systems";
+
+          document.querySelector('#actual ul').append(document.createElement("li"));
+          document.querySelectorAll("#actual li")[2].append(document.createElement("a"));
+          document.querySelector("#actual a").setAttribute("href", "https://www.badgerbadgerbadger.com");//set the attribute first
+          document.querySelector("#actual a").setAttribute("expected", "_blank");
+          document.querySelector("#actual a").innerHTML = "learn about badgers";//then set the innerHTML
+          
+
+          document.querySelector('#actual ul').append(document.createElement("li"));
+          document.querySelectorAll("#actual li")[3].innerHTML = "oil";
+
+
         </script>
       </div>
 
