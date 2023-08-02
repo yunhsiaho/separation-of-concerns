@@ -47,7 +47,7 @@
           for (let thing of things) {
             const newLi = document.createElement('li');
             newLi.innerText = thing;
-            ulEl.appendChild(newLi);
+            ulEl.appendChild(newLi);//use for loop to append every array element as <li> under <ul>
           }
 
           const actual = document.getElementById('actual');

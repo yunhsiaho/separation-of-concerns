@@ -18,7 +18,7 @@
 
   <body>
     <header>
-      <h2>DETAILS/SUMAMRY example</h2>
+      <h2>DETAILS/SUMMARY example</h2>
     </header>
 
     <section class="things-to-study">
@@ -41,14 +41,14 @@
           debugger;
 
           const summaryEl = document.createElement('summary');
-          summaryEl.innerText = 'a great tutorial on DOM manipulation:';
+          summaryEl.innerText = 'a great tutorial on DOM manipulation:';//create <summary>
 
-          const aEl = document.createElement('a');
+          const aEl = document.createElement('a');//create <a> with href and expected:_blank
           aEl.innerText = 'Mr. Traversy does it again!';
           aEl.href = 'https://www.youtube.com/watch?v=0ik6X4DJKCc';
           aEl.expected = '_blank';
 
-          const detailsEl = document.createElement('details');
+          const detailsEl = document.createElement('details');//NOTE create a <details> nested <summary> and <a>
           detailsEl.appendChild(summaryEl);
           detailsEl.appendChild(aEl);
 

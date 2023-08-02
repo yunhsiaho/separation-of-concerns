@@ -45,11 +45,11 @@
           debugger;
 
           const expectedDiv = document.getElementById('expected');
-          const linkToClone = expectedDiv.children[0].children[1];
+          const linkToClone = expectedDiv.children[0].children[1];//<a>
           const clonedLink = linkToClone.cloneNode(true);
 
           const actualDiv = document.getElementById('actual');
-          actualDiv.children[0].appendChild(clonedLink);
+          actualDiv.children[0].appendChild(clonedLink);//append <a> to #actual, under the summary
         </script>
       </div>
 

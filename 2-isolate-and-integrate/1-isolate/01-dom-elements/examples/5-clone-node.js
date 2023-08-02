@@ -13,8 +13,8 @@
 */
 
 const divEl = document.createElement('div');
-console.log('clone:', divEl.cloneNode(true));
-console.log('reference:', divEl, '\n\n');
+console.log('clone:', divEl.cloneNode(true));//<div></div>
+console.log('reference:', divEl, '\n\n');//already change into <div class="red-car">corvette</div>
 
 divEl.innerHTML = 'corvette';
 console.log('clone:', divEl.cloneNode(true));
@@ -22,4 +22,4 @@ console.log('reference:', divEl, '\n\n');
 
 divEl.className = 'red-car';
 console.log('clone:', divEl.cloneNode(true));
-console.log('reference:', divEl, '\n\n');
+console.log('reference:', divEl, '\n\n'); 

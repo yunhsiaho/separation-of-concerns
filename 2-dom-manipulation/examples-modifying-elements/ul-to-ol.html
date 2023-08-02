@@ -55,10 +55,10 @@
           const numChildren = unorderedList.children.length;
           for (let i = 0; i < numChildren; i++) {
             const nextChild = unorderedList.children[i].cloneNode(true);
-            orderedList.appendChild(nextChild);
+            orderedList.appendChild(nextChild);//create an new list of ol
           }
 
-          actual.replaceChild(orderedList, unorderedList);
+          actual.replaceChild(orderedList, unorderedList);//replace ul list with ol list
         </script>
       </div>
 

@@ -8,12 +8,12 @@ import {
   LIST_CLASS,
 } from '../data/constants.js';
 
-debugger; // once when the program is initialized
+//debugger; // once when the program is initialized
 
 // ===== a user can add a number to the list =====
 
 document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (event) => {
-  debugger; // each time the user adds a number
+  //debugger; // each time the user adds a number
 
   // --- process user input ---
   const newNumber = Number(event.target.value);
@@ -24,7 +24,7 @@ document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (event) => {
   // --- read state to update the UI ---
 
   // sort a copy of all saved numbers
-  const sortedNumbers = [...state.numbers].sort((a, b) => a - b);
+  const sortedNumbers = [...state.numbers].sort((a, b) => a - b); //NOTE align the numbers in order
 
   // render a new list
   const numberItems = sortedNumbers
@@ -42,7 +42,7 @@ document.getElementById(INPUT_ID).addEventListener(ADD_EVENT, (event) => {
 // ===== a user can remove a number from the list =====
 
 document.getElementById(OUTPUT_ID).addEventListener(REMOVE_EVENT, (event) => {
-  debugger; // each time the user removes a number
+  //debugger; // each time the user removes a number
 
   // only continue if the user clicked a list item
   if (event.target.nodeName !== 'LI') {
@@ -50,10 +50,10 @@ document.getElementById(OUTPUT_ID).addEventListener(REMOVE_EVENT, (event) => {
   }
 
   // --- process user input ---
-  const toRemove = Number(event.target.innerText);
+  const toRemove = Number(event.target.innerText); //NOTE declare toRemove as the number been clicked
 
   // --- update state ---
-  state.numbers = state.numbers.filter((number) => number !== toRemove);
+  state.numbers = state.numbers.filter((number) => number !== toRemove);//NOTE leave the number that are not equal to toRemove
 
   // --- read state to update the UI ---
 

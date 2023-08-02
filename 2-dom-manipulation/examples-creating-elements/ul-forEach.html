@@ -48,7 +48,7 @@
           things.forEach((thing) => {
             const newLi = document.createElement('li');
             newLi.innerText = thing;
-            ulEl.appendChild(newLi);
+            ulEl.appendChild(newLi);//use forEach loop to append every array element as <li> under <ul>
           });
 
           const actual = document.getElementById('actual');

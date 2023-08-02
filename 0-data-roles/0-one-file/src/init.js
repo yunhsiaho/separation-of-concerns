@@ -1,6 +1,6 @@
-debugger; // once when the program is initialized
+//debugger; // once when the program is initialized
 
-const state = {
+const state = {//NOTE create an object
   currentNumber: 0,
   allNumbers: [],
 };
@@ -8,15 +8,15 @@ const state = {
 // ==== the user can add a new number to state ====
 
 document.getElementById('next-number').addEventListener('change', (event) => {
-  debugger; // each time the user changes the 'next-number' input
+  //debugger; // each time the user changes the 'next-number' input
 
   // --- read the user's input ---
-  const inputValue = event.target.value;
-  const nextNumber = Number(inputValue);
+  const inputValue = event.target.value; //NOTE here the target means the target of which the event occurs
+  const nextNumber = Number(inputValue);//NOTE change the input value to a number
 
   // --- update state ---
-  state.allNumbers.push(nextNumber);
-  state.currentNumber = state.allNumbers.at(-1);
+  state.allNumbers.push(nextNumber);//NOTE  push the new number to the array in state object
+  state.currentNumber = state.allNumbers.at(-1);//NOTE current number is the last element in the allNumbers array
 
   // --- update UI ---
 
@@ -24,7 +24,7 @@ document.getElementById('next-number').addEventListener('change', (event) => {
   const liString = `<li class="number-item">${state.currentNumber}</li>`;
 
   // add the new item to the history
-  const backwardsContainer = document.getElementById('number-history');
+  const backwardsContainer = document.getElementById('number-history');//NOTE id of the ui tag
   backwardsContainer.innerHTML = liString + backwardsContainer.innerHTML;
 });
 
@@ -33,7 +33,7 @@ document.getElementById('next-number').addEventListener('change', (event) => {
 document
   .getElementById('number-history')
   .addEventListener('mouseover', (event) => {
-    debugger; // each time the user moves the mouse over 'number-history'
+    //debugger; // each time the user moves the mouse over 'number-history'
 
     // only do something if the user is hovering over an LI child
     if (event.target.nodeName !== 'LI') {
@@ -41,12 +41,12 @@ document
     }
 
     // read the user's input
-    const targetText = event.target.innerText;
-    const userNumber = Number(targetText);
+    const targetText = event.target.innerText;//NOTE the number mouse hover through
+    const userNumber = Number(targetText);//NOTE change the value into number
 
     // update state
     state.currentNumber = userNumber;
 
     // update the UI
-    document.getElementById('next-number').value = state.currentNumber;
+    document.getElementById('next-number').value = state.currentNumber;//NOTE change the  number in the input box to the hovered number
   });
