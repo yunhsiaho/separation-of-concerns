@@ -16,15 +16,22 @@ divEl.innerHTML = `
   </table>
 `;
 console.log(divEl.nodeName, divEl.cloneNode(true));
-
+//console.log(divEl.querySelectorAll('ul td').innerHTML);
 // --- write some code ---
 //  you will need to access and update each <td> element
 
 // --- --- --- --- --- ---
 
+
 console.log(divEl.nodeName, divEl.cloneNode(true));
 
 const expectedInnerHTMLs = ['a', 'b', 'c', 'd'];
+
+for(let i = 0; i <expectedInnerHTMLs.length;i++){
+  divEl.querySelectorAll('ul td')[i].innerHTML = expectedInnerHTMLs[i];
+  console.log(divEl);  
+}
+
 for (let i = 0; i < 2; i++) {
   for (let j = 0; j < 2; j++) {
     const tbodyEL = divEl.children[0].children[0];

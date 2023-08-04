@@ -37,3 +37,4 @@ buttonEl.dispatchEvent(clickEvent1);
 //  many times will you see an alert?
 const clickEvent2 = new Event('hover');
 buttonEl.dispatchEvent(clickEvent2);
+console.log(buttonEl.nodeName, buttonEl);
