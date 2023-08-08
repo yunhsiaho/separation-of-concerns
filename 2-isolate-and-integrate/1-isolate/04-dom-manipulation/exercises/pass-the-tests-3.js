@@ -13,7 +13,19 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
 // --- write some code ---
 //  you want to create a 2x2 table with a, b, c, d in the squares
+for(let i = 0; i <=1;i++){
+  for(let i = 0; i <=1;i++){
+    let newTd= document.createElement("td");
+    divEl.querySelectorAll("tr")[i].append(newTd);
+  }
+}
 
+let alphabet = ["a", "b", "c", "d"];
+for(let r = 0; r <=3;r++){
+  //console.log(divEl.querySelectorAll("td")[r].innerHTML);
+  divEl.querySelectorAll("td")[r].innerHTML = alphabet[r];
+}
+console.log(divEl);
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName + ' (after)', divEl.cloneNode(true));

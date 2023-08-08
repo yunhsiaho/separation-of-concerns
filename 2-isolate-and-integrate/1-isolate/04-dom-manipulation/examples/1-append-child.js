@@ -18,7 +18,7 @@ divEl.appendChild(pEl);
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
 
-console.assert(
+console.assert( //console.assert will only show an error message when there's an error. If everything passes, there won't be anything in console.
   divEl.children[0].nodeName === 'H1',
   'Test 1st child: .nodeName',
 );
