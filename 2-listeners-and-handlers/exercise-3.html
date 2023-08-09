@@ -15,7 +15,7 @@
   <body>
     <section id="user-interface">
       <form class="inputs" id="inputs">
-        <select name="_" id="selector">
+        <select name="type" id="selector">
           <option value="rock">rock</option>
           <option value="paper">paper</option>
           <option value="scissors">scissors</option>
@@ -27,9 +27,9 @@
     <script id="handlers">
       'use strict';
 
-      const first = (event) => {
-        debugger;
-        console.assert(event.target._ === 'selector', 'first: target.id');
+      const first = (event) => {//select
+        //debugger;
+        console.assert(event.target.id === 'selector', 'first: target.id');
         console.assert(
           event.target.nodeName === 'SELECT',
           'first: target.nodeName',
@@ -39,17 +39,17 @@
           'first: target.form.id',
         );
         console.assert(
-          event.target.childElementCount === _,
+          event.target.childElementCount === 3,
           'third: target.childElementCount',
         );
       };
 
       const second = (event) => {
-        debugger;
-        console.assert(event._ === 'blur', 'second: event.type');
+        //debugger;
+        console.assert(event.type === 'blur', 'second: event.type');
         console.assert(event.target.id === 'selector', 'second: target.id');
         console.assert(
-          event.target.nodeName === '_',
+          event.target.nodeName === 'SELECT',
           'second: target.nodeName',
         );
         console.assert(event.target.name === 'type', 'second: target.name');
@@ -60,18 +60,18 @@
       };
 
       const third = (event) => {
-        debugger;
+        //debugger;
         console.assert(event.type === 'click', 'third: event.type');
         console.assert(event.target.id === 'user-action', 'third: target.id');
         console.assert(event.target.name === 'clickable', 'third: target.name');
-        console.assert(event.target.nodeName === '_', 'third: target.nodeName');
+        console.assert(event.target.nodeName === 'SELECT', 'third: target.nodeName');
       };
     </script>
 
     <script id="listeners">
-      document.getElementById('_').addEventListener('change', _);
-      document.getElementById('_').addEventListener('blur', _);
-      document.getElementById('_').addEventListener('click', _);
+      document.getElementById('user-interface').addEventListener('change', first);
+      document.getElementById('selector').addEventListener('blur', second);
+      document.getElementById('user-action').addEventListener('click', third);
     </script>
   </body>
 </html>

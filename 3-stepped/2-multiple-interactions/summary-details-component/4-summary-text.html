@@ -16,8 +16,8 @@
 
     <script id="data">
       const state = {
-        mainText: '',
         summaryText: '',
+        mainText: '',
         isOpen: false,
       };
       console.log('initial state:', { ...state });
@@ -74,7 +74,7 @@
         detailsEl.appendChild(summaryEl);
         detailsEl.appendChild(pEl);
 
-        detailsEl.addEventListener('click', preventDefaultHandler);
+        detailsEl.addEventListener('click', preventDefaultHandler);//prevent opening the details by clicking the triangle
 
         return detailsEl;
       };

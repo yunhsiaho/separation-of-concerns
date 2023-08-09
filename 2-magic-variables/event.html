@@ -13,15 +13,15 @@
 
     <script id="data">
       // what happens if you uncomment this line?
-      // const event = 'hi';
+      const event = 'hi';
     </script>
 
     <script id="handlers">
-      const magicEvent = () => {
+      const magicEvent = () => {//didn't pass the argument
         console.log('magic:', event);
       };
 
-      const parameterEvent = (event) => {
+      const parameterEvent = (event) => {//pass event as the argument
         console.log('parameter:', event);
       };
     </script>

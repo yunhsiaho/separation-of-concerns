@@ -16,9 +16,9 @@
     </section>
 
     <script id="data">
-      const state = {
-        mainText: '',
+        const state = {
         summaryText: '',
+        mainText: '',
         isOpen: false,
       };
       console.log('initial state:', { ...state });
@@ -31,7 +31,7 @@
       };
 
       const openCloseHandler = () => {
-        debugger;
+        //debugger;
         // read user input
         const newIsOpen = document.getElementById('toggle-is-open').checked;
         // update state
@@ -46,7 +46,7 @@
       };
 
       const summaryTextHandler = () => {
-        debugger;
+        //debugger;
         // read user input
         const newSummaryText =
           document.getElementById('new-summary-text').value;
@@ -62,7 +62,7 @@
       };
 
       const mainTextHandler = () => {
-        debugger;
+        //debugger;
         // read user input
         const newMainText = document.getElementById('new-main-text').value;
         // update state
